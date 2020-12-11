@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+# Faker::Sports::Basketball.team #=> "Golden State Warriors"
+
+# Faker::Sports::Basketball.player #=> "LeBron James"
+
+# Faker::Sports::Basketball.coach #=> "Gregg Popovich"
+
+# Faker::Sports::Basketball.position #=> "Point Guard"
+
+10.times do 
+    Player.create(name: Faker::Sports::Basketball.player, team: Faker::Sports::Basketball.team, number: rand() * 100)
+end
